@@ -1,0 +1,520 @@
+
+
+
+<!-- Revisi by Rico Prediansyah -->
+
+
+
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <head>
+      <title>Smart Greenhouse Desa Gisting Permai</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+      <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+      <link rel="stylesheet" href="css/home.css">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Poppins:wght@400;500;600;700;800&display=swap"
+          rel="stylesheet">
+          <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  </head>
+
+  <body>
+    
+    
+      <section>
+        <nav id="navbar" class="navbar navbar-expand-lg navbar-dark">
+          <div class="container">
+            <button style="margin-top: 6px;" class="navbar-toggler" type="button" data-bs-toggle="collapse"
+              data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03"
+               aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <b style="color:aliceblue; padding-left: 50px;" class="navbar-brand" href="#">
+              <img src="img/Logogreenhouse.png" alt="Logo" width="30" height="30" class="d-inline-block align-text-button">
+              Smart Greenhouse
+            </b>
+  
+            <ul class="nav justify-content-end navbar-nav collapse navbar-collapse" id="navbarTogglerDemo03">
+              <li id="nav-option" class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Dasboard</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">About Us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Contact US</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+
+                  <!-- SIMPLE DARK MODE -->
+                  <div id="toggleButton">Color Mode</div>
+                  <script>
+                    document.addEventListener('DOMContentLoaded', function () {
+                        const toggleButton = document.getElementById('toggleButton');
+            
+                        toggleButton.addEventListener('click', function () {
+                            const currentColor = document.body.style.backgroundColor;
+                            document.body.style.backgroundColor = currentColor === 'white' ? '#007656' : 'white';
+                        });
+                    });
+                </script>
+                </a>
+              </li>
+            </ul
+          </div>
+        </nav>
+      </section>
+    <div class="container">
+      <div id="page-content-wrapper">
+        <div class="container-fluid">
+          <div class="row ">
+            <div class=" col-lg-12 ">
+              <div class="d-flex flex-column flex-md-row justify-content-center justify-content-md-between py-5">
+                <h1 style="color: white; padding-top: 40px; padding-left: 40px;" class="text-left">Smart Greenhouse <br> Desa Gisting Permai
+                </h1>
+                  <div class="image-container1 ">
+                    <img style="margin-right: 100px;" src="img/vektor 1.png" alt="right" width="300" height="230">
+                    </div>
+                  </div>
+                </div>
+              </div>
+    
+    
+              <!-- kotak aktuator-->
+              <div style="padding-top: 20px;" class="text-center">
+                <div class="row">
+                  <div class="col-sm-4">
+                    <div class="well">
+                      <p></p>
+                      <i class="bi bi-thermometer-snow"></i>
+                      <p style="padding-top: 10px;"></p>
+                      <p><b>Sistem Pendingin</b></p>
+                      <p id="coolingsystem"></p>
+                      </div>
+                    </div>
+                    <div class="col-sm-4">
+                      <div class="well">
+                        <p></p>
+                        <i class="bi bi-thermometer-sun"></i>
+                        <p style="padding-top: 10px;"> </p>
+                        <p><b>Lampu UV</b></p>
+                        <p id="uvlampu"></p>
+                      </div>
+                    </div>
+                    <div class="col-sm-4">
+                      <div class="well">
+                        <p></p>
+                        <i class="bi bi-clock"></i>
+                        <p style="padding-top: 10px;"></p>
+                        <p><b>Tanggal & Waktu</b></p>
+                        <p id="datetime"></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+    
+                <!--Tanki Nutrisi-->
+                <div style="background-image: linear-gradient(to right, #56B690, #AAD0AF);"
+                  class="container-2 text-center mb-5">
+                  <div class="d-flex flex-column ">
+                    <script src="js/home.js"></script>
+                    <h3 ><strong>Tanki Nutrisi</strong></h3>
+                    <div class="row align-items-center container-lg my-5">
+                      <div class="row text-left">
+                        <div class="col-sm-3">
+                          <div class="well-2">
+                            <b style="color: #426b47" >TDS (mg/L)</b>
+                            <strong>
+                              <p style="font-size: 25px; color: #74a17a;"  id="tdsmeter"></p>
+                            </strong>
+                          </div>
+                        </div>
+                        <div class="col-sm-3">
+                          <div class="well-2">
+                            <b style="color: #426b47" >Suhu Air (°C)</b>
+                            <strong>
+                            <p style="font-size: 25px; color: #74a17a;"  id="suhuair"></p>
+                            </strong>
+                          </div>
+                        </div>
+                        <div class="col-sm-3">
+                          <div class="well-2">
+                            <b style="color: #426b47" >pH</b>
+                            <strong>
+                              <p style="font-size: 25px; color: #74a17a;"  id="sensor_ph"></p>
+                            </strong>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+    
+                        <!--KLIMATOLOGI-->
+                        <div class="container-3 text-center mb-5">
+                            <div class="d-flex flex-column ">
+                                <h3 ><strong>Klimatologi</strong></h3>
+                                <div class=" row align-items-center container-lg my-5">
+                                    <div class="row text-left">
+                                        <div class="col-sm-3">
+                                            <div class="well-2">
+                                                <b style="color: #426b47" >Arah Angin</b>
+                                                <strong>
+                                                  <p style="font-size: 25px; color: #74a17a;"  id="winddirect"></p>
+                                                </strong>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <div class="well-2">
+                                                <b style="color: #426b47" >Kecepatan Angin(m/s)</b>
+                                                <strong>
+                                                  <p style="font-size: 25px; color: #74a17a;"  id="anemo"></p>
+                                                </strong>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <div class="well-2">
+                                                <b style="color: #426b47" >Curah Hujan</b>
+                                                <strong>
+                                                  <p style="font-size: 25px; color: #74a17a;"  id="raingauge"></p>
+                                                </strong>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <div class="well-2">
+                                                <b style="color: #426b47" >Suhu Ruangan (°C)</b>
+                                                <strong>
+                                                  <p style="font-size: 25px; color: #74a17a;"  id="dht"></p>
+                                                </strong>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+    
+                            <!--kebutuhan tanaman-->
+                            <div class="container-3 text-center mb-5">
+                                <div class="d-flex flex-column ">
+                                    <h3><strong>Kebutuhan Tanaman</strong></h3>
+                                    <div class=" row align-items-center container-lg my-5">
+                                        <div class="row text-left">
+                                            <div class="col-sm-3">
+                                                <div class="well-2">
+                                                    <b style="color: #426b47" >Water Flow 1 (L/H)</b>
+                                                    <strong>
+                                                      <p style="font-size: 25px; color: #74a17a;"  id="waterflow_1"></p>
+                                                    </strong>
+                                                    <script src="js/home.js"></script>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-3">
+                                                <div class="well-2">
+                                                    <b style="color: #426b47" >Water Flow 2 (L/H)</b>
+                                                    <strong>
+                                                      <p style="font-size: 25px; color: #74a17a;"  id="waterflow_2"></p>
+                                                    </strong>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-3">
+                                                <div class="well-2">
+                                                    <b style="color: #426b47" >Water Flow 3 (L/H)</b>
+                                                    <strong>
+                                                      <p style="font-size: 25px; color: #74a17a;"  id="waterflow_3"></p>
+                                                    </strong>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-3">
+                                                <div class="well-2">
+                                                    <b style="color: #426b47" >Water Flow 4 (L/H)</b>
+                                                    <strong>
+                                                      <p style="font-size: 25px; color: #74a17a;"  id="waterflow_4"></p>
+                                                    </strong>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row text-left my-3">
+                                            <div class="col-sm-3">
+                                                <div class="well-2">
+                                                    <b style="color: #426b47" >Water Flow 5 (L/H)</b>
+                                                    <strong>
+                                                      <p style="font-size: 25px; color: #74a17a;"  id="waterflow_5"></p>
+                                                    </strong>
+                                                    <script src="js/home.js"></script>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-3">
+                                                <div class="well-2">
+                                                    <b style="color: #426b47" >Water Flow 6 (L/H)</b>
+                                                    <strong>
+                                                      <p style="font-size: 25px; color: #74a17a;"  id="waterflow_6"></p>
+                                                    </strong>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-3">
+                                                <div class="well-2">
+                                                    <b style="color: #426b47" >Water Flow 7 (L/H)</b>
+                                                    <strong>
+                                                      <p style="font-size: 25px; color: #74a17a;"  id="waterflow_7"></p>
+                                                    </strong>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-3">
+                                                <div class="well-2">
+                                                    <b style="color: #426b47" >Water Flow 8 (L/H)</b>
+                                                    <strong>
+                                                      <p style="font-size: 25px; color: #74a17a;"  id="waterflow_8"></p>
+                                                    </strong>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row text-left">
+                                            <div class="col-sm-3">
+                                                <div class="well-2">
+                                                  <b style="color: #426b47" >Water Flow 9 (L/H)</b>
+                                                  <strong>
+                                                    <p style="font-size: 25px; color: #74a17a;"  id="waterflow_9"></p>
+                                                  </strong>
+                                                    <script src="js/home.js"></script>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-3">
+                                                <div class="well-2">
+                                                  <b style="color: #426b47" >Water Flow 10 (L/H)</b>
+                                                  <strong>
+                                                    <p style="font-size: 25px; color: #74a17a;"  id="waterflow_10"></p>
+                                                  </strong>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-3">
+                                                <div class="well-2">
+                                                  <b style="color: #426b47" >Water Flow 11 (L/H)</b>
+                                                  <strong>
+                                                    <p style="font-size: 25px; color: #74a17a;"  id="waterflow_11"></p>
+                                                  </strong>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-3">
+                                                <div class="well-2">
+                                                  <b style="color: #426b47" >Water Flow 12 (L/H)</b>
+                                                  <strong>
+                                                    <p style="font-size: 25px; color: #74a17a;"  id="waterflow_12"></p>
+                                                  </strong>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div style="padding-top: 20;" class="row text-left my-3">
+                                          <div class="col-sm-3">
+                                            <div class="well-2">
+                                              <b style="color: #426b47" >Soil Moisture 1 (%)</b>
+                                              <strong>
+                                                <p style="font-size: 25px; color: #74a17a;"  id="soilmoisture_1"></p>
+                                              </strong>
+                                            </div>
+                                          </div>
+                                          <div class="col-sm-3">
+                                            <div class="well-2">
+                                              <b style="color: #426b47" >Soil Moisture 2 (%)</b>
+                                              <strong>
+                                                <p style="font-size: 25px; color: #74a17a;"  id="soilmoisture_2"></p>
+                                              </strong>
+                                            </div>
+                                          </div>
+                                          <div class="col-sm-3">
+                                            <div class="well-2">
+                                              <b style="color: #426b47" >Soil Moisture 3 (%)</b>
+                                              <strong>
+                                                <p style="font-size: 25px; color: #74a17a;"  id="soilmoisture_3"></p>
+                                              </strong>
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <div style="padding-top: 20;" class="row text-left my-3">
+                                            <div class="col-sm-3">
+                                                <div class="well-2">
+                                                  <b style="color: #426b47" >Sensor Berat 1 (gr)</b>
+                                                  <strong>
+                                                    <p style="font-size: 25px; color: #74a17a;"  id="weight_1"></p>
+                                                  </strong>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-3">
+                                                <div class="well-2">
+                                                  <b style="color: #426b47" >Sensor Berat 2 (gr)</b>
+                                                  <strong>
+                                                    <p style="font-size: 25px; color: #74a17a;"  id="weight_2"></p>
+                                                  </strong>
+                                                </div>
+                                              </div>
+                                            <div class="col-sm-3">
+                                                <div class="well-2">
+                                                  <b style="color: #426b47" >Sensor Berat 3 (gr)</b>
+                                                  <strong>
+                                                    <p style="font-size: 25px; color: #74a17a;"  id="weight_3"></p>
+                                                  </strong>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-3">
+                                                <div class="well-2">
+                                                  <b style="color: #426b47" >Sensor Berat 4 (gr)</b>
+                                                  <strong>
+                                                    <p style="font-size: 25px; color: #74a17a;"  id="weight_4"></p>
+                                                  </strong>
+                                                </div>
+                                            </div>
+    
+                                          <div style="padding-top: 20;" class="row text-left my-3">
+                                          </div>
+                                            <div class="col-sm-3">
+                                              <div class="well-2">
+                                                <b style="color: #426b47" >Infrared 1 (°C)</b>
+                                                <strong>
+                                                  <p style="font-size: 25px; color: #74a17a;"  id="infrared_1"></p>
+                                                </strong>
+                                              </div>
+                                            </div>
+                                            
+                                            <div class="col-sm-3">
+                                              <div class="well-2">
+                                                <b style="color: #426b47" >Infrared 2 (°C)</b>
+                                                <strong>
+                                                  <p style="font-size: 25px; color: #74a17a;"  id="infrared_2"></p>
+                                                </strong>
+                                              </div>
+                                            </div>
+                                          </div>
+                                            
+                                        </div>                                      
+                                    </div>
+                                </div>
+                            </div>
+                
+                            <script src="js/home.js"></script>
+                            <div id="table-container">
+                                <table  id="realtime-table">
+                                <table class="table table-bordered">
+                                <thead>
+                                  <tr>
+                                    <th>No</th>
+                                    <th>Waktu</th>
+                                    <th>PH (pH)</th>
+                                    <th>TDS (mg/L) </th>
+                                    <th>Suhu Air(°C)</th>
+                                    <th>Arah Angin (°)</th>
+                                    <th>Kecepatan Angin (m/s)</th>
+                                    <th>Infrared 1 (°C)</th>
+                                    <th>Infrared 2 (°C)</th>
+                                    <th>Sensor Berat 1 (gr)</th>
+                                    <th>Sensor Berat 2 (gr)</th>
+                                    <th>Sensor Berat 3 (gr)</th>
+                                    <th>Sensor Berat 4 (gr)</th>
+                                    <th>Waterflow 1 (L/H)</th>
+                                    <th>Waterflow 2 (L/H)</th>
+                                    <th>Waterflow 3 (L/H)</th>
+                                    <th>Waterflow 4 (L/H)</th>
+                                    <th>Waterflow 5 (L/H)</th>
+                                    <th>Waterflow 6 (L/H)</th>
+                                    <th>Waterflow 7 (L/H)</th>
+                                    <th>Waterflow 8 (L/H)</th>
+                                    <th>Waterflow 9  (L/H)</th>
+                                    <th>Waterflow 10 (L/H)</th>
+                                    <th>Waterflow 11 (L/H)</th>
+                                    <th>Waterflow 12 (L/H)</th>
+                                    <th>Soil Moisture 1 (%)</th>
+                                    <th>Soil Moisture 2 (%)</th>
+                                    <th>Soil Moisture 3 (%)</th>
+                                    <th>Suhu Ruangan(°C)</th>
+                                    <th>Curah Hujan</th>
+                                  </tr>
+                                </thead>
+                                <tbody id="data-body">
+                                  <!-- Data akan ditambahkan ke sini secara dinamis -->
+                                </tbody>
+                                </table>
+                              </table> 
+                            </div>
+    
+      <!-- Formulir untuk memilih interval -->
+      <div class="container-5-lg my-5">
+        <!-- Data Grafik Tabel -->
+        <h2 class="Judul text-center" id="judul_grafik"><b style="color: white;">Grafik</b></h2>
+        <script src="js/home.js"></script>
+        <div class="chart-container">
+        <!-- Suhu PH -->
+        <div class="chart">
+            <canvas id="myChart"></canvas>
+        </div>
+        <!-- TDS SENSOR  -->
+        <div class="chart">
+            <canvas id="ChartSuhuDasar"></canvas>
+        </div>
+        <!-- Suhu Air -->
+        <div class="chart">
+            <canvas id="Chartsuhuair"></canvas>
+        </div>
+        <!-- Rain Gauge -->
+        <div class="chart">
+            <canvas id="Chartraingauge"></canvas>
+        </div>
+        <!-- Arah Angin -->
+        <div class="chart">
+            <canvas id="Chartwinddirect"></canvas>
+        </div>
+        <!-- Anemo -->
+        <div class="chart">
+            <canvas id="Chartanemo"></canvas>
+        </div>
+        <!-- Infrared -->
+        <div class="chart">
+            <canvas id="Chartinfrared"></canvas>
+        </div>
+        <!-- Weight --->
+        <div class="chart">
+            <canvas id="Chartberat"></canvas>
+        </div>
+        <!-- Suhu Ruangan -->
+        <div class="chart">
+            <canvas id="Chartsuhuruangan"></canvas>
+        </div>
+        <!-- Soil Moisture -->
+        <div class="chart">
+        <canvas id="Chartsoil"></canvas>
+        </div>
+        <!-- Waterflow -->
+        <div class="chart">
+        <canvas id="Chartwaterflow"></canvas>
+        </div>
+      </div>
+
+    </div>
+    
+    
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>

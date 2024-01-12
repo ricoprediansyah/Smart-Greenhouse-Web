@@ -1,0 +1,268 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+*{
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+  background-color: white;
+}
+b{
+  color: white;
+}
+.nav-item{
+  padding-left: 15px;
+}
+
+p{
+  color: white;
+}
+
+i{
+  color: white;
+  font-size: 30px;
+  background-color: #96c681;
+  border-radius: 100px;
+  padding: 10px 17px;
+  
+  
+}
+
+#navbar{
+  background-image: linear-gradient(to right, #56B690, #AAD0AF);
+}
+  /* Main Content */
+  #page-content-wrapper{
+    width: 100%;	
+    padding:15px;
+    transition:all .5s;
+  }
+  
+  .col-lg-12{
+    flex-shrink: 0;
+    border-radius: 16px;
+    background-image: linear-gradient(to right, #56B690, #AAD0AF);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25); 
+  }
+
+  .col-lg-12 .text-left{
+    color: #000000;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    display: flex;
+  }
+
+  .col-lg-12 .image-container{
+    position: absolute;
+    top: 50%;
+    left: 90%;
+    transform: translate(-50%, -50%);
+  }
+
+
+/* css blok pendingin */
+/* .nav-item{
+  padding-left: 15px;
+  position: relative;
+  padding-top: 10px;
+} */
+h3{
+  color: #ffffff;"
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.col {
+    padding: 20px;
+}
+
+.col-sm-3{
+  padding-top: 5px;
+}
+.well {
+    background-color: #61A3BA;
+    border: 0 solid white;
+    border-radius: 10px;
+    padding: 15px;
+    font-size: 20px;
+    text-align: center;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.well img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.well h2 {
+    margin-top: 16px;
+}
+
+.container-2{
+    width: 100%;
+    padding: 30px;
+    justify-content: center;
+    max-width: auto;
+    margin: auto;
+    border-radius: 6px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.well-2 {
+    padding: 15px;
+    border-radius: 6px;
+    background: white;
+    
+  }
+
+  .container-3{
+    width: 100%;
+    padding: 30px;
+    max-width: auto;
+    margin: auto;
+    background-image: linear-gradient(to right, #56B690, #AAD0AF);
+    border-radius: 6px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.container-4{
+    width: 100%;
+    padding: 30px;
+    max-width: auto;
+    margin: auto;
+    background-image: linear-gradient(to right, #56B690, #AAD0AF);
+    border-radius: 6px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+/*tabel*/
+#table-container {
+    width: 100%;
+    overflow: auto;
+    margin-top: 20px;
+    padding-left: 10px;
+    background-image: linear-gradient(to right, #56B690, #AAD0AF);
+  }
+  
+  table {
+    width: 100%;
+    margin: 30px;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+  }
+  
+  th,
+  td {
+    border: 1px solid #ffffff;
+    text-align: left;
+    padding: 10px;
+  }
+
+  .container-5-lg{
+    width: 100%;
+    padding: 10px;
+    max-width: auto;
+    margin: auto;
+    background-image: linear-gradient(to right, #56B690, #AAD0AF);
+    border-radius: 6px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  }
+
+  /* Form Styling */
+.form-container {
+    margin-top: 20px;
+  }
+  
+  select {
+    color: #fffefe;
+    font-size: medium;
+    padding: 10px;
+    border: 1px solid #65B741;
+    background-color: #1c450a;
+  }
+  
+  /* Content Styling */
+  .content {
+    padding: 16px;
+    height: calc(100vh - 40px);
+  }
+  
+  /* Footer Styling */
+  .footer {
+    padding: 20px;
+    text-align: center;
+    background-color: #65B741;
+    color: #ffffff;
+  }
+
+
+  .nav-item {
+    justify-content: center;
+  }
+  
+  .chart-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px auto;
+  }
+  
+  .chart {
+    height: 300px;
+    flex: 1;
+    box-sizing: border-box;
+    margin: 5px;
+    background-color: rgb(255, 255, 255);
+  }
+
+  /* layout website */
+  @media screen and (min-width: 767px){
+    .nav-item{
+      padding-top: 6px;
+    }
+        
+    #nav-option{
+      padding-left: 160px;
+
+    }
+    }
+  
+/* Styles for small screens (max-width: 767px) */
+@media (max-width: 767px) {
+  /* Adjust page content width and padding */
+  #page-content-wrapper {
+      padding: 20px;
+  }
+
+  
+
+  /* Center align text in the header */
+  .d-flex.flex-row {
+      text-align: center;
+  }
+
+  /* Adjust font size for the heading */
+  h1.text-left {
+      font-size: 18px;
+  }
+
+  /* Adjust margin for the image in the header */
+  .image-container {
+      margin-top: 10px;
+  }
+
+  /* Style for the well elements in the container */
+  .well {
+      margin-bottom: 20px;
+  }
+
+  /* Center align text in the wells */
+  .well p {
+      text-align: center;
+  }
+}
