@@ -1,0 +1,194 @@
+
+
+
+<!-- Revisi by Rico Prediansyah -->
+
+
+
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <head>
+      <title>Smart Greenhouse Desa Gisting Permai</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+      <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+      <link rel="stylesheet" href="css/about.css">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Poppins:wght@400;500;600;700;800&display=swap"
+          rel="stylesheet">
+          <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  </head>
+
+  <body>
+      <section>
+        <nav id="navbar" class="navbar navbar-expand-lg navbar-dark">
+          <div class="container">
+            <button style="margin-top: 6px;" class="navbar-toggler" type="button" data-bs-toggle="collapse"
+              data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03"
+               aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <b style="color:aliceblue; padding-left: 50px;" class="navbar-brand" href="#">
+              <img src="img/Logogreenhouse.png" alt="Logo" width="30" height="30" class="d-inline-block align-text-button">
+              Smart Greenhouse
+            </b>
+  
+            <ul class="nav justify-content-end navbar-nav collapse navbar-collapse" id="navbarTogglerDemo03">
+              <li id="nav-option" class="nav-item">
+                <a class="nav-link" href="index.html">Dasboard</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#AboutUs">About Us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#ContactUs">Contact US</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <!-- SIMPLE DARK MODE -->
+                <div id="toggleButton">Color Mode</div>
+                <script>
+                  document.addEventListener('DOMContentLoaded', function () {
+                      const toggleButton = document.getElementById('toggleButton');
+          
+                      toggleButton.addEventListener('click', function () {
+                          const currentColor = document.body.style.backgroundColor;
+                          document.body.style.backgroundColor = currentColor === 'white' ? '#007656' : 'white';
+                      });
+                  });
+                </script>
+                </a>
+              </li>
+            </ul
+          </div>
+        </nav>
+      </section>
+    <section class="container">
+      <div id="page-content-wrapper">
+        <div class="container-fluid">
+          <div class="row">
+            <div class=" col-lg-12 ">
+              <h1 class="text-center">
+                <strong id="AboutUs">
+                  About Us
+                </strong>
+              </h1>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="row mb-3 mt-4" style="margin: 0 10px;">
+                    <h3>Smart Greenhouse berbasis Intelligent Control System (ICS), pendekatan baru dalam pertanian dengan memanfaatkan teknologi canggih dan analisis data untuk mengoptimalkan proses pertumbuhan, mengurangi limbah, dan meningkatkan produktivitas. Smart Greenhouse hadir sebagai inovasi pertanian yang cerdas untuk meningkatkan produktivitas pertanian, mengurangi penggunaan pestisida, dan mengurangi risiko gagal panen akibat perubahan iklim. </h3>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="text-center pb-5">
+                    <img src="img/vektor 1.png" alt="right" width="300" height="230">
+                  </div>
+                </div>
+              </div>  
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  
+    <section class="container">
+      <div id="page-content-wrapper">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-lg-12">
+              <div>
+                <h1 class="text-center pb-3">
+                  <strong id="ContactUs" >
+                    Contact Us
+                  </strong>
+                </h1>
+                <div class="row align-items-center">
+                  <div class="col-md-6">
+                    <div class="text-center">
+                      <img src="img/vektor 1.png" alt="right" width="300" height="230">
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <form action="#">
+                      <div class="input-box">
+                        <div class="row">
+                          <div id="name" class="col-md-6">
+                            <div class="mb-3">
+                              <input type="name" class="form-control" id="exampleFormControlInput1"
+                              placeholder="Your Name" autocomplete="off">
+                            </div>
+                          </div>
+                        
+                          <div class="col-md-6">
+                            <div class="mb-3">
+                              <input type="email" class="form-control" id="exampleFormControlInput1"
+                              placeholder="Your Email" autocomplete="off">
+                            </div>
+                          </div>
+                        </div>
+                      
+                        <div class="row">
+                          <div class="col-md-12">
+                            <div class="mb-3">
+                              <input type="email" class="form-control" id="exampleFormControlInput1"
+                              placeholder="Subject" autocomplete="off">
+                            </div>
+                          </div>
+                        </div>
+                
+                        <div class="mb-3">
+                          <textarea style="height: 200px;" class="form-control" id="exampleFormControlTextarea1"
+                          rows="3" placeholder="Message"></textarea>
+                        </div>
+                      </div>
+                      <div class="text-center">
+                        <button style="margin-bottom: 20px;" class="btn btn-primary" type="button">Button</button>
+                      </div>
+                      <div>
+    
+                      </div>
+                    </form>
+
+                  </div>
+                  
+                  
+
+                </div>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+
+    
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>
