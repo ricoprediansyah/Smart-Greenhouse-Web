@@ -36,49 +36,47 @@
   <body>
     
     
-      <section>
-        <nav id="navbar" class="navbar navbar-expand-lg navbar-dark">
-          <div class="container">
-            <button style="margin-top: 6px;" class="navbar-toggler" type="button" data-bs-toggle="collapse"
-              data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03"
-               aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <b style="color:aliceblue; padding-left: 50px;" class="navbar-brand" href="#">
-              <img src="img/Logogreenhouse.png" alt="Logo" width="30" height="30" class="d-inline-block align-text-button">
-              Smart Greenhouse
-            </b>
-  
-            <ul class="nav justify-content-end navbar-nav collapse navbar-collapse" id="navbarTogglerDemo03">
-              <li id="nav-option" class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Dasboard</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="about.html">About Us</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="about.html">Contact US</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">
-                  <!-- SIMPLE DARK MODE -->
-                  <div id="toggleButton">Color Mode</div>
-                  <script>
-                    document.addEventListener('DOMContentLoaded', function () {
-                        const toggleButton = document.getElementById('toggleButton');
-            
-                        toggleButton.addEventListener('click', function () {
-                            const currentColor = document.body.style.backgroundColor;
-                            document.body.style.backgroundColor = currentColor === 'white' ? '#007656' : 'white';
-                        });
+    <nav id="navbar" class="navbar navbar-expand-lg sticky-top navbar-dark bg-body-tertiary">
+      <div class="container">
+        <button style="margin-top: 6px;" class="navbar-toggler" type="button" data-bs-toggle="collapse"
+          data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03"
+            aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <b style="color:aliceblue; padding-left: 50px;" class="navbar-brand" href="#">
+          <img src="img/Logogreenhouse.png" alt="Logo" width="30" height="30" class="d-inline-block align-text-button">
+          Smart Greenhouse
+        </b>
+
+        <ul class="nav justify-content-end navbar-nav collapse navbar-collapse" id="navbarTogglerDemo03">
+          <li id="nav-option" class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Dasboard</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">Contact US</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              
+              <div id="toggleButton">Color Mode</div>
+              <script>
+                document.addEventListener('DOMContentLoaded', function () {
+                    const toggleButton = document.getElementById('toggleButton');
+        
+                    toggleButton.addEventListener('click', function () {
+                        const currentColor = document.body.style.backgroundColor;
+                        document.body.style.backgroundColor = currentColor === 'white' ? '#007656' : 'white';
                     });
-                </script>
-                </a>
-              </li>
-            </ul
-          </div>
-        </nav>
-      </section>
+                });
+            </script>
+            </a>
+          </li>
+        </ul
+      </div>
+    </nav>
     <div class="container">
       <div id="page-content-wrapper">
         <div class="container-fluid">
