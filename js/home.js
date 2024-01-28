@@ -23,8 +23,8 @@ $(document).ready(function(){
           // Update tampilan dengan data yang diterima dari server
           console.log(result);
           document.getElementById('sensor_ph').innerText = `pH ${result.ph}`;
-          document.getElementById('coolingsystem').innerText = result.coolingsystem;
-          document.getElementById('uvlampu').innerText = result.uvlampu;
+          // document.getElementById('coolingsystem').innerText = result.coolingsystem;
+          // document.getElementById('uvlampu').innerText = result.uvlampu;
           document.getElementById('tdsmeter').innerText = result.tdsmeter;
           document.getElementById('suhuair').innerText = result.suhuair;
           document.getElementById('winddirect').innerText = result.winddirect;
@@ -394,20 +394,20 @@ $(document).ready(function(){
         }
       }
   
-      function updatecoolingsystemBox(coolingsystem, value) {
-        var box = document.getElementById(coolingsystem);
-        var status = (value > 1) ? 'Aktif' : 'Tidak Aktif';
-        var backgroundColor = (value > 1) ? '#61A3BA' : '#E53B35';
-        box.parentElement.style.backgroundColor = backgroundColor;
-        box.innerHTML = status;
-      }
-    function updateuvlampuBox(uvlampu, value) {
-      var box = document.getElementById(uvlampu);
-      var status = (value > 1) ? 'Aktif' : 'Tidak Aktif';
-      var backgroundColor = (value > 1) ? '#61A3BA' : '#E53B35';
-      box.parentElement.style.backgroundColor = backgroundColor;
-      box.innerHTML = status;
-    }
+    //   function updatecoolingsystemBox(coolingsystem, value) {
+    //     var box = document.getElementById(coolingsystem);
+    //     var status = (value > 1) ? 'Aktif' : 'Tidak Aktif';
+    //     var backgroundColor = (value > 1) ? '#61A3BA' : '#E53B35';
+    //     box.parentElement.style.backgroundColor = backgroundColor;
+    //     box.innerHTML = status;
+    //   }
+    // function updateuvlampuBox(uvlampu, value) {
+    //   var box = document.getElementById(uvlampu);
+    //   var status = (value > 1) ? 'Aktif' : 'Tidak Aktif';
+    //   var backgroundColor = (value > 1) ? '#61A3BA' : '#E53B35';
+    //   box.parentElement.style.backgroundColor = backgroundColor;
+    //   box.innerHTML = status;
+    // }
     function updatedateBox(elementId, value) {
         // Menggunakan method toLocaleString() untuk format tanggal dan waktu lokal
         var sekarang = new Date();
@@ -415,6 +415,49 @@ $(document).ready(function(){
         console.log(sekarang.toLocaleString('en-US', options));
 
       }
+
+      // JavaScript to control background color based on time
+        var coolingsystem = document.getElementById('coolingsystem');
+        var uvlampu = document.getElementById('uvlampu');
+
+        function updateBackground() {
+            var currentTime = new Date();
+            var hours = currentTime.getHours();
+            var minutes = currentTime.getMinutes();
+
+            var coolingsystemWell = document.querySelector('.coolingsystem-inactive');
+            var uvLampuWell = document.querySelector('.uvlampu-inactive');
+
+            // Check if coolingsystem is active
+
+            if ((hours === 11 && minutes >= 1 && minutes < 16) || (hours === 2 && minutes >= 1 && minutes < 16)) {
+                coolingsystemWell.classList.remove('coolingsystem-inactive');
+                coolingsystemWell.classList.add('coolingsystem-active');
+                coolingsystem.textContent = 'aktif';
+            } else {
+                coolingsystemWell.classList.remove('coolingsystem-active');
+                coolingsystemWell.classList.add('coolingsystem-inactive');
+                coolingsystem.textContent = 'tidak aktif';
+            }
+
+            // Check if uvlampu is active
+            
+            if ((hours >= 18 && hours < 23) || (hours >= 0 && hours < 6)) {
+                uvLampuWell.classList.remove('uvlampu-inactive');
+                uvLampuWell.classList.add('uvlampu-active');
+                uvlampu.textContent = 'aktif';
+            } else {
+                uvLampuWell.classList.remove('uvlampu-active');
+                uvLampuWell.classList.add('uvlampu-inactive');
+                uvlampu.textContent = 'tidak aktif';
+            }
+        }
+
+        // Call the function initially to set the background based on the current time
+        updateBackground();
+
+        // Update the background every second
+        setInterval(updateBackground, 1000);
   
       fetch('https://vps.isi-net.org:5001/GetDataGistingNew')
     .then(response => {
